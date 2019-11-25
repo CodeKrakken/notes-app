@@ -1,10 +1,15 @@
-(function(exports){
-  function Note(){
-    this.Note_list = []
+(function(exports) {
+  function doesTheNoteStoreInTheArray() {
+   
+    this.textArray = [];
   };
 
-Note.prototype.add= function () {
-  note.text("Favourite Drink: Seltzer")
+Note.prototype.add = function(note) {
+  this.textArray.push(note);
+
 }
 
-};
+})(this);
+
+
+
