@@ -9,11 +9,11 @@ doesTheTextStore();
 })(this);
 
 (function(exports) {
-  function doesTheTextLog() {
+  function canIRetrieveANote() {
     var note = new Note("My favourite language is Spanish");
     
-    assert.isTrue(note.logText() === console.log(note.text));
+    assert.isTrue(note.retrieveNote() === console.log(note.text));
 };
 
-doesTheTextLog();
+canIRetrieveANote();
 })(this);

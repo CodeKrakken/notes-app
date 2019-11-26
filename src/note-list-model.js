@@ -1,22 +1,28 @@
-// (function(exports) {
-//   function NoteList() {
-//     this.textArray = [];
-//   };
-//   exports.Note = Note;
-// })(this);
+(function(exports) {
+  function NoteList() {
+    this.arrayOfNotes = [];
+  }
 
-// // (function(exports) {
-// //   function Circle() {
-// //     this.radius = 10;
-// //   };
+NoteList.prototype = (function() {
 
-// //   exports.Circle = Circle;
-// // })(this);
+  function createNote(text) {
+    note = new Note(text);
+    this.arrayOfNotes.push(note.text);
+  }
 
+  function seeNotes() {
+    console.log(this.arrayOfNotes);
+  }
+  
+  return {
+    createNote: createNote
+  };
 
+  return {
+    seeNotes: seeNotes
+  };
 
-// // NoteList.prototype.add = function(note) {
-// //   this.textArray.push(note);
+})();
 
-// // }
-
+  exports.NoteList = NoteList;
+})(this);
