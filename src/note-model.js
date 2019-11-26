@@ -1,6 +1,19 @@
 (function(exports) {
   function Note(text) {
-    this.text = "My favourite language is Ruby";
+    this.text = text;
+  }
+
+Note.prototype = (function() {
+
+  function logText() {
+    console.log(this.text);
+  }
+
+  return {
+    logText: logText
   };
+
+})();
+
   exports.Note = Note;
 })(this);

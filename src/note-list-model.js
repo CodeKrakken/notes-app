@@ -1,15 +1,22 @@
-(function(exports) {
-  function doesTheNoteStoreInTheArray() {
-   
-    this.textArray = [];
-  };
+// (function(exports) {
+//   function NoteList() {
+//     this.textArray = [];
+//   };
+//   exports.Note = Note;
+// })(this);
 
-Note.prototype.add = function(note) {
-  this.textArray.push(note);
+// // (function(exports) {
+// //   function Circle() {
+// //     this.radius = 10;
+// //   };
 
-}
+// //   exports.Circle = Circle;
+// // })(this);
 
-})(this);
 
 
+// // NoteList.prototype.add = function(note) {
+// //   this.textArray.push(note);
+
+// // }
 

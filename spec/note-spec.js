@@ -1,13 +1,19 @@
 (function(exports) {
   function doesTheTextStore() {
-    var note = new Note();
+    var note = new Note("My favourite language is Ruby");
 
-  if (note.text !== "My favourite language is Ruby") {
-   throw new Error("Text does not match");
-  } else {
-    console.log("Huzzah!");
-  }
-
+    assert.isTrue(note.text === "My favourite language is Ruby");
 };
+
 doesTheTextStore();
+})(this);
+
+(function(exports) {
+  function doesTheTextLog() {
+    var note = new Note("My favourite language is Spanish");
+    
+    assert.isTrue(note.logText() === console.log(note.text));
+};
+
+doesTheTextLog();
 })(this);
