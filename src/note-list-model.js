@@ -1,18 +1,22 @@
 (function(exports) {
   function NoteList() {
     this.arrayOfNotes = [];
+    this.textArray = [];
   }
 
 NoteList.prototype = (function() {
 
   function createNote(text) {
     note = new Note(text);
-    this.arrayOfNotes.push(note.text);
+    this.arrayOfNotes.push(note);
   }
 
   function seeNotes() {
-    return this.arrayOfNotes.join("\n");
-  }
+    for (var i=0; i < this.arrayOfNotes.length; i++) {
+      this.textArray.push(this.arrayOfNotes[i].text);
+    }
+    return this.textArray.join("\n");  
+  };
 
   return {
     createNote: createNote,
