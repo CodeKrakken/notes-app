@@ -11,14 +11,11 @@ NoteList.prototype = (function() {
   }
 
   function seeNotes() {
-    console.log(this.arrayOfNotes);
+    return this.arrayOfNotes.join("\n");
   }
-  
-  return {
-    createNote: createNote
-  };
 
   return {
+    createNote: createNote,
     seeNotes: seeNotes
   };
 

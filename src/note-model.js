@@ -5,12 +5,12 @@
 
 Note.prototype = (function() {
 
-  function retrieveNote() {
-    (this.text);
+  function retrieveText() {
+    return (this.text);
   }
 
   return {
-    retrieveNote: retrieveNote
+    retrieveText: retrieveText
   };
 
 })();
