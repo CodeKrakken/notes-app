@@ -25,7 +25,7 @@ function doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithNoNotes() {
 
 doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithNoNotes();
 
-function doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithSeveralNotes() {
+function doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithTwoNotes() {
   var notelist = new NoteList();
   notelist.createNote("How am I doing?");
   notelist.createNote("Who the hell knows?");
@@ -34,4 +34,4 @@ function doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithSeveralNotes()
 
 };
 
-doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithSeveralNotes();
+doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithTwoNotes();
