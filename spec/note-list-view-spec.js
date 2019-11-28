@@ -60,7 +60,7 @@ function doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithOhLetsSayTenNo
   notelist.createNote("of");
   notelist.createNote("short notes");
   var notelistview = new NoteListView(notelist);
-  assert.isTrue(notelistview.htmlDisplay() === "<ul><li><div>This</div></li><li><div>is</div></li><li><div>an</div></li><li><div>array</div></li><li><div>containing</div></li><li><div>a</div></li><li><div>steaming</div></li><li><div>pile</div></li><li><div>of</div></li><li><div>short notes</div></li></ul");
+  assert.isTrue(notelistview.htmlDisplay() === "<ul><li><div>This</div></li><li><div>is</div></li><li><div>an</div></li><li><div>array</div></li><li><div>containing</div></li><li><div>a</div></li><li><div>steaming</div></li><li><div>pile</div></li><li><div>of</div></li><li><div>short notes</div></li></ul>");
 };
 
 doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithOhLetsSayTenNotes();
