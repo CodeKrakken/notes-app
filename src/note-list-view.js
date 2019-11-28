@@ -6,11 +6,11 @@
 NoteListView.prototype = (function() {
 
   function htmlDisplay() {
-    
-    for (var i=0; i < this.notelist.noteArray.length; i++) {                        // for the many
-      this.notelist.textArray.push(this.notelist.noteArray[i].text);                // for the many
-    }                                                                               // for the many
-    return "<ul><li><div>" + this.notelist.textArray.join("</div></li><li><div>") + "</div></li></ul>"; // for the many
+    if (!this.notelist) {return "<ul><li><div></div></li></ul>"; };
+    for (var i=0; i < this.notelist.noteArray.length; i++) {
+      this.notelist.textArray.push(this.notelist.noteArray[i].text);
+    }
+    return "<ul><li><div>" + this.notelist.textArray.join("</div></li><li><div>") + "</div></li></ul>";
   }
 
   return {
