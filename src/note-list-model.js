@@ -1,6 +1,6 @@
 (function(exports) {
   function NoteList() {
-    this.arrayOfNotes = [];
+    this.noteArray = [];
     this.textArray = [];
   }
 
@@ -8,12 +8,12 @@ NoteList.prototype = (function() {
 
   function createNote(text) {
     note = new Note(text);
-    this.arrayOfNotes.push(note);
+    this.noteArray.push(note);
   }
 
   function seeNotes() {
-    for (var i=0; i < this.arrayOfNotes.length; i++) {
-      this.textArray.push(this.arrayOfNotes[i].text);
+    for (var i=0; i < this.noteArray.length; i++) {
+      this.textArray.push(this.noteArray[i].text);
     }
     return this.textArray.join("\n");  
   };

@@ -2,7 +2,7 @@
   function doesTheNoteStoreInTheArray() {
     var notelist = new NoteList();
     notelist.createNote("Favourite drink: seltzer, after the salsa");
-    assert.isTrue(notelist.arrayOfNotes[0].text === ("Favourite drink: seltzer, after the salsa"));
+    assert.isTrue(notelist.noteArray[0].text === ("Favourite drink: seltzer, after the salsa"));
   };
   
 doesTheNoteStoreInTheArray();
