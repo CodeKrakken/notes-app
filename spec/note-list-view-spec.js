@@ -17,10 +17,21 @@ function doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithOneNote() {
 doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithOneNote();
 
 function doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithNoNotes() {
-  var notelist = NoteList();
+  var notelist = new NoteList();
   var notelistview = new NoteListView(notelist);
   assert.isTrue(notelistview.htmlDisplay() === "<ul><li><div></div></li></ul>");
 
 };
 
 doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithNoNotes();
+
+function doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithSeveralNotes() {
+  var notelist = new NoteList();
+  notelist.createNote("How am I doing?");
+  notelist.createNote("Who the hell knows?");
+  var notelistview = new NoteListView(notelist);
+  assert.isTrue(notelistview.htmlDisplay() === "<ul><li><div>How am I doing?</div></li><li><div>Who the hell knows?</div></li></ul>");
+
+};
+
+doesItReturnAStringOfHTMLThatRepresentsANoteListModelWithSeveralNotes();
