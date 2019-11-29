@@ -1,2 +1,3 @@
-var element = document.getElementById("app").innerHTML;
-console.log(element);
+window.onload = function() {
+document.getElementById("app").innerHTML = "howdy";
+}
